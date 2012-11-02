@@ -3,6 +3,7 @@ ENV['GEM_HOME'] = "#{ENV['HOME']}/gems"
 
 require 'rubygems'
 require 'sinatra'
+require './service'
  
 set :environment, :production
 disable :run
