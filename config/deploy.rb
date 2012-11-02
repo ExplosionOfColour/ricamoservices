@@ -5,10 +5,10 @@ set :deploy_to, "/home/explosio/apps/#{application}"
 set :user, "explosio"
 set :use_sudo, false
 
-# set :scm, :git
-# set :repository, "git@github.com:app_user/app_name.git"
-#set :branch, 'master'
-# set :git_shallow_clone, 1
+set :scm, :git
+set :repository, "git@github.com:ExplosionOfColour/ricamoservices.git" 
+set :branch, 'master'
+set :git_shallow_clone, 1
 
 role :web, domain
 role :app, domain
