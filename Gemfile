@@ -1,5 +1,5 @@
 source :rubygems
 
-gem 'sinatra'
+gem 'sinatra', :require => "sinatra/base"
 gem 'capistrano'
 gem 'highline'
