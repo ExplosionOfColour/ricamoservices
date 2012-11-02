@@ -1,2 +1,7 @@
 PassengerEnabled on
 RackBaseURI /ricamoservices.explosionofcolour.com
+
+RedirectMatch permanent ^/ricamoservices$ http://ricamoservices.explosionofcolour.com
+RewriteEngine On
+RewriteCond %{HTTP_HOST} !ricamoservices.explosionofcolour.com$
+RewriteRule ^(.*) http://ricamoservices.explosionofcolour.com/$1 [R=301,L]
