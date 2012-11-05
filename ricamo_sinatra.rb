@@ -1,22 +1,11 @@
-require 'json'
+require 'rubygems'
 require 'sinatra'
 
-class RicamoSinatra < Sinatra::Base
-  get "/" do
-    "Hello Bundler"
-  end
-
-chief_complaints = [
-  { name: "Dizziness" },
-  { name: "Chest Pain" },
-]
-
-before /.*/ do
-  content_type :json
+before do
+  # Strip the last / from the path
+  request.env['PATH_INFO'].gsub!(/\/$/, '')
 end
 
-get '/chief_complaints' do
-  chief_complaints.to_json
-end
-
+get '' do
+   "Hello world"
 end
