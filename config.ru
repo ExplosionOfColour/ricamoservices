@@ -1,11 +1,10 @@
-root_dir = File.dirname(__FILE__)
-app_file = File.join(root_dir, 'ricamo_sinatra.rb')
-require app_file
- 
-set :environment, :production
-# set :environment, ENV['RACK_ENV'].to_sym
-set :root,        root_dir
-set :app_file,    app_file
+ENV['GEM_PATH'] = "#{ENV['HOME']}/gems:/usr/lib/ruby/gems/1.8"
+ENV['GEM_HOME'] = "#{ENV['HOME']}/gems"
+
+require 'rubygems'
+require 'sinatra'
+
+set :env,  :production
 disable :run
 
-run Sinatra::Application
+require 'ricamo_sinatra.rb'
