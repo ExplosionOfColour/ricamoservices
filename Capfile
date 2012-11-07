@@ -20,7 +20,7 @@ role :db,  domain, :primary => true
 # environment settings
 set :user, "explosio"
 # set :group, "deploy"
-set :deploy_to, "/home/#{user}"/apps/#{application}"
+set :deploy_to, "/home/#{user}/apps/#{application}"
 set :deploy_via, :remote_cache
 default_run_options[:pty] = true
 
